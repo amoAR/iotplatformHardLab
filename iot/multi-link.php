@@ -28,7 +28,7 @@ include_once 'classes/autoload.php';
     <div class="px-md-5">
         <div class="row " style="margin-top: 1%; padding-top:1%;">
             <form class="col-md-2 g-2 mx-auto card " method="POST" target="_blank"
-                  action="http://hivaind.ir/test/surnameupdate.php"
+                  action="#"
                   _lpchecked="1">
                 <h3>family</h3>
                 <label class="form-label">
@@ -44,7 +44,7 @@ include_once 'classes/autoload.php';
             </form>
             <br/>
             <form class="col-md-2 g-2 mx-auto card " method="GET" target="_blank"
-                  action="http://hivaind.ir/wil/logidtable81.php"
+                  action="#"
                   _lpchecked="1">
                 <h3>table WIL</h3>
                 <label class="form-label">
@@ -60,7 +60,7 @@ include_once 'classes/autoload.php';
             </form>
             <br/>
             <form class="col-md-2 g-2 mx-auto card " method="GET" target="_blank"
-                  action="https://hivaind.ir/test/db-excel-v2.php"
+                  action="#"
                   _lpchecked="1">
                 <h3>excel V2</h3>
                 <label class="form-label">
@@ -80,7 +80,7 @@ include_once 'classes/autoload.php';
             </form>
             <br/> 
             <form class="col-md-2 g-2 mx-auto card " method="GET" target="_blank"
-                  action="http://hivaind.ir/wil/logidtableTHWL.php"
+                  action="#"
                   _lpchecked="1">
                 <h3>table THW_L</h3>
                 <label class="form-label">
@@ -96,7 +96,7 @@ include_once 'classes/autoload.php';
             </form>
             <br/>
             <form class="col-md-2 mx-auto g-2 card " method="GET" target="_blank"
-                  action="http://hivaind.ir/wil/loglastjson81.php"
+                  action="#"
                   _lpchecked="1">
                 <h3 class="card-title">log last json 81 </h3>
                 <label class="form-label">
@@ -113,7 +113,7 @@ include_once 'classes/autoload.php';
         </div>
         <div class="row " style="margin-top: 1%; padding-top:1%;">
             <form class="col-md-2 mx-auto g-2 card " method="GET" target="_blank"
-                  action="http://hivaind.ir/crud/jsonIDconfig.php"
+                  action="#"
                   _lpchecked="1">
                 <h3 class="card-title">json ID config</h3>
                 <label class="form-label">
@@ -126,7 +126,7 @@ include_once 'classes/autoload.php';
             </form>
             <br/>
             <form class="col-md-2 mx-auto g-2 card " method="GET" target="_blank"
-                  action="http://hivaind.ir/property/jsonIDproperty.php"
+                  action="#"
                   _lpchecked="1">
                 <h3 class="card-title">json ID property </h3>
                 <label class="form-label">
@@ -139,7 +139,7 @@ include_once 'classes/autoload.php';
             </form>
             <br/> 
             <form class="col-md-2 mx-auto g-2 card " method="GET" target="_blank"
-                  action="http://hivaind.ir/wil/informationID.php"
+                  action="#"
                   _lpchecked="1">
                 <h3 class="card-title">Information ID </h3>
                 <label class="form-label">
@@ -152,7 +152,7 @@ include_once 'classes/autoload.php';
             </form>
             <br/>           
             <form class="col-md-2 mx-auto g-2 card " method="GET" target="_blank"
-                  action="http://hivaind.ir/crud/idconnect.php"
+                  action="#"
                   _lpchecked="1">
                 <h3 class="card-title">connect ID </h3>
                 <label class="form-label">
@@ -172,21 +172,21 @@ include_once 'classes/autoload.php';
 
     <div class="row" style="margin-top: 1%; padding-top:1%;">
         <div class="col-md-3 btn-group-vertical mx-auto">
-            <a class=" btn btn-outline-secondary" href="http://hivaind.ir/crud/thwform-admin.php" target="_blank">THW
+            <a class=" btn btn-outline-secondary" href="#" target="_blank">THW
                 form admin</a>
-            <a class=" btn btn-outline-secondary" href="http://hivaind.ir/crud/thwform-user.php" target="_blank">THW
+            <a class=" btn btn-outline-secondary" href="#" target="_blank">THW
                 form user</a>
-            <a class=" btn btn-outline-secondary" href="http://hivaind.ir/property/form-project.php"
+            <a class=" btn btn-outline-secondary" href="#"
                target="_blank">Project change form</a>
-            <a class=" btn btn-outline-secondary" href="http://hivaind.ir/property/tableproperty.php"
+            <a class=" btn btn-outline-secondary" href="#"
                target="_blank">table property</a>
-            <a class=" btn btn-outline-secondary" href="http://hivaind.ir/crud/config_admin2.php" target="_blank">WIL
+            <a class=" btn btn-outline-secondary" href="#" target="_blank">WIL
                 form admin</a>
-            <a class=" btn btn-outline-secondary" href="http://hivaind.ir/crud/all-ID.php" target="_blank">All
+            <a class=" btn btn-outline-secondary" href="#" target="_blank">All
                 ID Json</a>
-            <a class=" btn btn-outline-secondary" href="http://hivaind.ir/crud/gswID.php" target="_blank">gswID</a>
-            <a class=" btn btn-outline-secondary" href="http://hivaind.ir/property/form-property.php" target="_blank">form property</a>
-            <a class=" btn btn-outline-secondary" href="http://hivaind.ir/property/all-ID-ui.php" target="_blank">All ID</a>
+            <a class=" btn btn-outline-secondary" href="#" target="_blank">gswID</a>
+            <a class=" btn btn-outline-secondary" href="#" target="_blank">form property</a>
+            <a class=" btn btn-outline-secondary" href="#" target="_blank">All ID</a>
         </div>
         <br/>
     </div>
