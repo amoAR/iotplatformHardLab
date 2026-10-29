@@ -1,7 +1,7 @@
 <?php 
     class Database {
         private $host = "localhost";
-        private $database = "hivaindb_alldata";
+        private $database = "amoarnet_alldata";
         private $username = "root";
         private $password = "";
         public $conn;
