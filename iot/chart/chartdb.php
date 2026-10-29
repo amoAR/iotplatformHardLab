@@ -19,11 +19,11 @@ if (isset($_GET['tkn']) && !empty($_GET['tkn']) &&
     $query_SearchToken = "SELECT * FROM `user` u WHERE u.`clientID`='$clientID' AND u.`token`='$token'";
     if (mysqli_num_rows($result_SearchToken = $db->conn->query($query_SearchToken))) {
 
-        $query = "SELECT ".$prm.",`time_date` FROM " . $tableName . " ORDER by `time_date` desc LIMIT ".$rowCount;
+        $query = "SELECT ".$prm.",`timestamp` FROM " . $tableName . " ORDER by `timestamp` desc, `time_date` desc LIMIT ".$rowCount;
         $result = mysqli_query($db->conn, $query);
         if (mysqli_num_rows($result)) {
             while($row=mysqli_fetch_assoc($result)){
-                $timedate=$row['time_date'];
+                $timedate=date("Y-m-d H:i:s", $row['timestamp']);
                 $value=round(abs($row[$prm]),2);
 
                 $arr=array(

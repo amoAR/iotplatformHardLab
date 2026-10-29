@@ -30,7 +30,7 @@ if (isset($_GET['tkn']) && !empty($_GET['tkn']) &&
     $query_SearchToken = "SELECT * FROM `user` u WHERE u.`clientID`='$clientID' AND u.`token`='$token'";
     if (mysqli_num_rows($result_SearchToken = $db->conn->query($query_SearchToken))) {
 
-        $query = "SELECT * FROM " . $tableName . " ORDER by `time_date` desc LIMIT ".$rowCount;
+        $query = "SELECT * FROM " . $tableName . " ORDER by `timestamp` desc, `time_date` desc LIMIT ".$rowCount;
         $result = mysqli_query($db->conn, $query);
         if (mysqli_num_rows($result)) {
             while($row=mysqli_fetch_assoc($result)){
@@ -38,7 +38,7 @@ if (isset($_GET['tkn']) && !empty($_GET['tkn']) &&
                 $data2[] = round($row[$in2] , 1);
                 $data3[] = round($row[$in3] , 1);
                 $data4[] = round($row[$in4] , 1);
-                $data5 = $data5 . '"' . date("M / d   H : i", strtotime($row['time_date'])) . '",';
+                $data5 = $data5 . '"' . date("M / d   H : i", $row['timestamp']) . '",';
             }
 
         }else{

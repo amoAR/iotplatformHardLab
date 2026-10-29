@@ -14,7 +14,7 @@ if (isset($_GET['tkn']) && !empty($_GET['tkn']) &&
     if (mysqli_num_rows($result_SearchToken = $db->conn->query($query_SearchToken))) {
         $row_SearchToken=mysqli_fetch_assoc($result_SearchToken);
         $username=$row_SearchToken['username'];
-        $query = "SELECT * FROM " . $tableName . " ORDER by `time_date` desc LIMIT 1";
+        $query = "SELECT * FROM " . $tableName . " ORDER by `timestamp` desc, `time_date` desc LIMIT 1";
         $result = mysqli_query($db->conn, $query);
         if (mysqli_num_rows($result)) {
             $row = mysqli_fetch_assoc($result);
@@ -38,6 +38,7 @@ if (isset($_GET['tkn']) && !empty($_GET['tkn']) &&
                 'seng' => $row['seng'],
                 'senh' => $row['senh'],
                 'time_date' => $row['time_date'],
+                'timestamp' => $row['timestamp'],
 
             );
 

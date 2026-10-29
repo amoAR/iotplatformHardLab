@@ -13,7 +13,20 @@ if (
     $token = $_GET['tkn'];
     $tableName = "id_" . $clientID;
     $date = date("Y-m-d", time());
-    $timestamp = time();
+
+    // ts is the device measurement time (Unix timestamp in seconds), independent
+    // of upload time and time zone. time_date keeps the server receipt time.
+    $ts = null;
+    if (isset($_GET['ts']) && $_GET['ts'] !== '') {
+        $tsCandidate = filter_var($_GET['ts'], FILTER_VALIDATE_INT);
+        if ($tsCandidate !== false && $tsCandidate > 0) {
+            $ts = $tsCandidate;
+        }
+    }
+    if ($ts === null) {
+        echo json_encode(array('status' => 'Invalid or missing ts: provide a Unix timestamp in seconds'));
+        exit;
+    }
     $infoID = $db->conn->query("SELECT * FROM `user` WHERE `token`='$token' AND `clientID`='$clientID'");
     if ($infoID->num_rows > 0) {
         $res = mysqli_fetch_assoc($infoID);
@@ -159,7 +172,7 @@ if (
             } else {
                 $senh = 'off';
             }
-            $queryInsert = $db->conn->query("INSERT INTO " . $tableName . "( `clientID`, `ip`, `ina`, `inb`, `inc`, `ind`, `ine`, `inf`, `ing`, `inh`, `sena`, `senb`, `senc`, `send`, `sene`, `senf`, `seng`, `senh`,`timestamp`) VALUES ('$clientID','$clientIP','$ina','$inb','$inc','$ind','$ine','$inf','$ing','$inh','$sena','$senb','$senc','$send','$sene','$senf','$seng','$senh','$timestamp')");
+            $queryInsert = $db->conn->query("INSERT INTO " . $tableName . "( `clientID`, `ip`, `ina`, `inb`, `inc`, `ind`, `ine`, `inf`, `ing`, `inh`, `sena`, `senb`, `senc`, `send`, `sene`, `senf`, `seng`, `senh`,`timestamp`) VALUES ('$clientID','$clientIP','$ina','$inb','$inc','$ind','$ine','$inf','$ing','$inh','$sena','$senb','$senc','$send','$sene','$senf','$seng','$senh','$ts')");
             if ($queryInsert) {
                 echo json_encode(
                     array(
